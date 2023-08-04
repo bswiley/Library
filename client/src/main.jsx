@@ -1,10 +1,10 @@
-import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-import App from './App.jsx'
-import SearchBooks from './pages/SearchBooks'
-import SavedBooks from './pages/SavedBooks'
+import App from './App.jsx';
+import SearchBooks from './pages/SearchBooks.jsx';
+import SavedBooks from './pages/SavedBooks.jsx';
 
 const router = createBrowserRouter([
   {
@@ -14,15 +14,17 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <SearchBooks />
-      }, {
+        element: <SearchBooks />,
+      },
+      {
         path: '/saved',
-        element: <SavedBooks />
-      }
-    ]
-  }
-])
+        element: <SavedBooks />,
+      },
+    ],
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <RouterProvider router={router} />
-)
+);
+

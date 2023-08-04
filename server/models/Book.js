@@ -27,5 +27,5 @@ const bookSchema = new Schema({
     required: true,
   },
 });
-
-module.exports = bookSchema;
+const Book = model('Book', bookSchema);
+module.exports = Book;
